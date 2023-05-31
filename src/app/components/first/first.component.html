@@ -1,0 +1,10 @@
+<h1>STORICO DEI CAMBIAMENTI</h1>
+
+<div>
+  <ul>
+    <!-- il pipe async è come se fosse una subscribe, apre quindi una scatola -->
+  <li *ngFor="let counterValue of dataService.counterValuesSubject | async">
+    {{counterValue.changes}}: <b>{{counterValue.value}}</b> {{counterValue.type}}
+  </li>
+</ul>
+</div>
